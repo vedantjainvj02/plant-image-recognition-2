@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>obj Image Recognition - Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Image Recognition - Result</h1>
+    <div class="result-container">
+        <h2>Recognized:</h2>
+        <p>{{ obj_name }}</p>
+        <h2>Confidence:</h2>
+        <p>{{ obj_info }}</p>
+        <h2>Uploaded Image:</h2>
+        <img src="{{ url_for('static', filename=obj_image.split('static/')[-1]) }}" alt="Uploaded Image" width="300">
+    </div>
+    <a href="{{ url_for('index') }}">Recognize Another Image</a>
+</body>
+</html>

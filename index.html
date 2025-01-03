@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Recognition</title>
+</head>
+<body>
+    <h1>Image Recognition</h1>
+    <div >
+        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit"> Upload Image</button>
+        </form>
+    </div>
+</body>
+</html>
